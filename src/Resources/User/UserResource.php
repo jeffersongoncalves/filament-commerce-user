@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\User\Resources\User;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\User\Models\User;
 use JeffersonGoncalves\FilamentCommerce\User\CommerceUserPlugin;
@@ -26,9 +26,9 @@ class UserResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return UserForm::configure($schema);
+        return UserForm::configure($form);
     }
 
     public static function table(Table $table): Table
