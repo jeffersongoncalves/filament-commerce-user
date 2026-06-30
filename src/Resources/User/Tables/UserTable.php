@@ -2,7 +2,7 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\User\Resources\User\Tables;
 
-use Filament\Actions;
+use Filament\Tables\Actions;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -20,11 +20,11 @@ class UserTable
                 TextColumn::make('last_name')
                     ->toggleable(),
             ])
-            ->recordActions([
+            ->actions([
                 Actions\EditAction::make(),
                 Actions\DeleteAction::make(),
             ])
-            ->toolbarActions([
+            ->bulkActions([
                 Actions\BulkActionGroup::make([
                     Actions\DeleteBulkAction::make(),
                 ]),
